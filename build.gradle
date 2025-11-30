@@ -11,21 +11,25 @@ repositories {
 
 dependencies {
     testImplementation platform('org.junit:junit-bom:5.10.0')
-    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testImplementation ('org.junit.jupiter:junit-jupiter')
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 
     // Cucumber + Java
-    testImplementation 'io.cucumber:cucumber-java:7.18.0'
-    testImplementation 'io.cucumber:cucumber-junit-platform-engine:7.18.0'
+    testImplementation('io.cucumber:cucumber-java:7.18.0')
+    testImplementation('io.cucumber:cucumber-junit-platform-engine:7.18.0')
 
     // JUnit 5
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.2'
+    testImplementation('org.junit.jupiter:junit-jupiter:5.10.2')
 
     // Rest-Assured for API testing
-    testImplementation 'io.rest-assured:rest-assured:5.5.0'
+    testImplementation('io.rest-assured:rest-assured:5.5.0')
 
     // Assertions
-    testImplementation 'org.assertj:assertj-core:3.26.0'
+    testImplementation('org.assertj:assertj-core:3.26.0')
+    testImplementation('org.junit.platform:junit-platform-suite-api:1.10.2')
+    testRuntimeOnly("org.junit.platform:junit-platform-suite-engine:1.10.2")
+    testImplementation ("com.fasterxml.jackson.core:jackson-databind:2.17.0")
+    testImplementation ('io.rest-assured:json-schema-validator:5.5.0')
 }
 
 test {
